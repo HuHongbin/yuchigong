@@ -12,7 +12,6 @@ public class CustomUserDetailsService implements UserDetailsService {
         if (!Objects.equals("lee", s)) {
             throw new UsernameNotFoundException(s);
         }
-        UserDetails userDetails = new CustomUserDetails(s, "123456");
-        return userDetails;
+        return new CustomUserDetails(s, "123456");
     }
 }

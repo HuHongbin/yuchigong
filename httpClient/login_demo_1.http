@@ -1,0 +1,16 @@
+### 登陆
+POST http://localhost:8080/api/login
+Content-Type: application/x-www-form-urlencoded
+
+account=lee&password=123456
+
+### 测试访问 无 Cookie
+GET http://localhost:8080/api/security/test
+Accept: application/json
+
+###
+GET http://localhost:8080/api/security/test
+Accept: application/json
+Cookie: JSESSIONID=1C1DD3EB60DEE60664FB0BFE0F1C9942
+
+###

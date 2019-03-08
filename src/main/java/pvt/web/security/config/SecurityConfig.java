@@ -22,13 +22,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginProcessingUrl("/api/login")
                 .usernameParameter("account")
                 .loginPage("/login.html")
+                .defaultSuccessUrl("/index.html")
                 .and()
-                .csrf()
-                .disable();
+                .csrf().disable();
     }
 
+    @Override
     @Bean
-    public UserDetailsService userDetailsService(){
+    public UserDetailsService userDetailsService() {
         return new CustomUserDetailsService();
     }
 }
